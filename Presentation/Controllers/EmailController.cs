@@ -11,7 +11,7 @@ public class EmailController(ICommunicationService communicationService) : Contr
 
     private readonly ICommunicationService _communicationService = communicationService;
 
-    [HttpPost]
+    [HttpPost("send")]
     public async Task<IActionResult> SendEmail([FromBody] EmailRequest request)
     {
         if (!ModelState.IsValid)

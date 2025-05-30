@@ -17,14 +17,14 @@ public class CommunicationService(EmailClient client, IConfiguration configurati
         {
             var subject = $"Bokningsbekräftelse för {eventName}";
             var plainTextContent = $@"
-                Hello {userName},
+                Hej {userName},
 
-                We are excited to confirm your ticket purchase for {eventName}!
+               Tack för din bokning av {eventName}!
                 
-                Looking forward seeing you and please enjoy!
+               Hoppas du får en fantastisk upplevelse!
 
-                Kindly Regards,
-                Ventixe Events
+               Med Vänliga Hälsningar,
+               Ventixe Events
 
 
 
@@ -32,11 +32,11 @@ public class CommunicationService(EmailClient client, IConfiguration configurati
             var htmlContent = $@"
                 <html>
                     <body>
-                        <h2> Hello {userName}</h2>
-                        <p>We are excited to confirm your ticket purchase for <strong>{eventName}</strong>.</p>
-                        <p>Looking forward seeing you and please enjoy!</p>
+                        <h2> Hej {userName}</h2>
+                        <p>Tack för din bokning av  <strong>{eventName}</strong>.</p>
+                        <p>Hoppas du får en fantastisk upplevelse!</p>
                         <br/>
-                        <p>Kindly Regards,<br/>Ventixe Events</p>
+                        <p>Med Vänliga Hälsningars,<br/>Ventixe Events</p>
                     </body>
                 </html>";
 
